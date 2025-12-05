@@ -47,7 +47,7 @@ gsettings set org.gnome.mutter check-alive-timeout 5000
 gsettings set org.gnome.shell enabled-extensions "[]"
 
 #org.gnome.settings-daemon.plugins.media-keys
-gsettings set org.gnome.settings-daemon.plugins.media-keys home ['']
+gsettings set org.gnome.settings-daemon.plugins.media-keys home "[]"
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'suspend'
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[]"
 
