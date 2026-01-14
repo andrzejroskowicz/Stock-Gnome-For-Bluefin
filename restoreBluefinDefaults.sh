@@ -1,5 +1,10 @@
 #Run this script if you're unhappy with stock gnome, it should bring Bluefin to defaults
 
+sudo -v #need it for modify the GDM looks
+
+#Return to custom GDM
+sudo rm -f /etc/dconf/db/gdm.d/custom.conf | sudo dconf update
+
 #org.gnome.desktop.background
 gsettings reset org.gnome.desktop.background picture-uri
 gsettings reset org.gnome.desktop.background picture-uri-dark
