@@ -1,5 +1,15 @@
 #values are taken from Gnome OS
 
+sudo -v #need it for modify GDM looks
+
+sudo echo "
+[org/gnome/desktop/sound]
+allow-volume-above-100-percent=false
+[org/gnome/desktop/interface]
+accent-color='blue'
+" | sudo tee /etc/dconf/db/gdm.d/custom.conf > /dev/null
+sudo dconf update
+
 #org.gnome.desktop.background - set's gnome wallpaper as default, but I personally like dinosaurs better. Feel free to un-comment
 #gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/gnome/adwaita-l.jxl'  
 #gsettings set org.gnome.desktop.background picture-uri-dark 'file:///usr/share/backgrounds/gnome/adwaita-d.jxl'
@@ -52,5 +62,5 @@ gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'suspe
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[]"
 
 #org.gtk.Settings.FileChooser
-gsettings set org.gtk.Settings.FileChooser sort-directories-first false
-gsettings set org.gtk.gtk4.Settings.FileChooser sort-directories-first false
+#gsettings set org.gtk.Settings.FileChooser sort-directories-first false
+#gsettings set org.gtk.gtk4.Settings.FileChooser sort-directories-first false
